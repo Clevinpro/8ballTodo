@@ -1,1 +1,77 @@
+$baseFontSize: 16px;
 
+@function pxToRem($val) {
+  $remSize: $val/$baseFontSize;
+  @return #{$remSize}rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.container--width {
+  max-width: 90.9rem;
+  min-width: pxToRem(320px);
+}
+
+body {
+  background-color: #3498db;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  padding: 2rem 0;
+}
+
+.footer {
+  padding: 2rem 0;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__card-container {
+  flex-basis: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main__ball-container {
+  flex-basis: 30%;
+}
+
+.main__card {
+  padding: 1rem 0;
+  flex-basis: 30%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 18px 0 rgba(0,0,0,.1);
+}
+
+.main__card-todo {
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 0 18px 0 rgba(0,0,0,.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.main__card-title {
+  font-size: 1rem;
+}
