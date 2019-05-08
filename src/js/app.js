@@ -1,5 +1,5 @@
 import { genarateId } from "./utils/helper";
-import {deleteNote} from "./utils/api";
+import {deleteNote ,addNote} from "./utils/api";
 
 export const notes = [
   {
@@ -32,7 +32,6 @@ export const notes = [
   }
 ];
 
-notes.length;
 class App {
   constructor() {
     this._notes = [];
@@ -41,15 +40,26 @@ class App {
     this.refs.start = document.querySelector(`.main__card__start`);
     this.refs.inprogress = document.querySelector(`.main__card__progress`);
     this.refs.completed = document.querySelector(`.main__card__completed`);
-
+    
     this.renderNodesList = this.renderNodesList.bind(this);
   }
+  
+  get notes(){
+  return this._notes;
+  }
+  set notes(notes){
+  return (this._notes = notes);
+  }
+  
+  addTodo(obj) {
+    this._notes.push(obj);
+    addNote(this._notes);
+  }
 
-  // genarateId() {}
-
-  addTodo() {}
-
-  deleteTodo() {}
+  deleteTodo(id) {
+    deleteNote(id);
+    this.renderNodesList();
+  }
 
   editTodo() {}
 
@@ -79,12 +89,6 @@ class App {
         this.refs.start.append(this.createNoteContent(el));
       }
     });
-  }
-  get notes(){
-return this._notes;
-  }
-  set notes(notes){
-return (this._notes = notes);
   }
 
 }

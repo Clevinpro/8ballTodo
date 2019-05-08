@@ -14,7 +14,7 @@ export const deleteNote = (id) => {
 }
 
 
-const addNote = (arr)=> {
+export const addNote = (arr)=> {
 
     return new Promise((resolve, reject) => {
         if(arr){
@@ -25,6 +25,4 @@ const addNote = (arr)=> {
         }})
 }
 
-function saveObjToArr(obj){
-    notes.push(obj)
-}
+
