@@ -61,15 +61,16 @@ body {
   flex-basis: 30%;
   height: 100%;
   background-color: #fff;
-  box-shadow: 0 0 18px 0 rgba(0,0,0,.1);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
 }
 
 .main__card-todo {
   width: 90%;
   margin: 0 auto;
-  box-shadow: 0 0 18px 0 rgba(0,0,0,.1);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
   padding: 1rem;
   margin-bottom: 1rem;
+  position: relative;
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -77,4 +78,15 @@ body {
 
 .main__card-title {
   font-size: 1rem;
+}
+
+.main__card-fav {
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/Star.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

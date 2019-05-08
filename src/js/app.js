@@ -6,7 +6,8 @@ export const notes = [
     title: "First",
     body: "1111111",
     inProgress: false,
-    complted: false
+    complted: false,
+    favorit: true
   },
   {
     id: 2,
@@ -31,7 +32,6 @@ export const notes = [
   }
 ];
 
-notes.length;
 class App {
   constructor() {
     this._notes = notes;
@@ -52,9 +52,11 @@ class App {
 
   editTodo() {}
 
-  createNoteContent({ title, body }) {
+  createNoteContent({ title, body, favorit }) {
     // console.log(document);
+
     const div = document.createElement("DIV");
+    const fav = document.createElement("DIV");
     const h2 = document.createElement("H2");
     const p = document.createElement("P");
     div.className = "main__card-todo";
@@ -64,6 +66,11 @@ class App {
     p.textContent = body;
     div.appendChild(h2);
     div.appendChild(p);
+    if (favorit) {
+      // console.log(favorit);
+      fav.className = "main__card-fav";
+      div.appendChild(fav);
+    }
 
     return div;
   }
@@ -81,8 +88,7 @@ class App {
   }
 }
 
-
 const app = new App();
 app.renderNodesList();
 
-genarateId(notes)
+genarateId(notes);
