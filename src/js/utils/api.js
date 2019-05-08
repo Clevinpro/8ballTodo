@@ -11,5 +11,5 @@ const addNote = (arr)=> {
 }
 
 function saveObjToArr(obj){
-    notes.push(obj)
+    note.push(obj)
 }
