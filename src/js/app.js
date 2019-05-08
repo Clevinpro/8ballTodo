@@ -1,1 +1,1 @@
-console.log('app')
+import {addNote} from "./create"
