@@ -80,10 +80,13 @@ class App {
       }
     });
   }
+  get notes(){
+return this._notes;
+  }
+  set notes(notes){
+return (this._notes = notes);
+  }
+
 }
 
 
-const app = new App();
-app.renderNodesList();
-
-genarateId(notes)
