@@ -13,15 +13,15 @@ export const notes = [
     id: 2,
     title: "Second",
     body: "2222222",
-    inProgress: true,
+    inProgress: false,
     complted: false
   },
   {
     id: 3,
     title: "Third",
     body: "333333333",
-    inProgress: false,
-    complted: true
+    inProgress: true,
+    complted: false
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const notes = [
   }
 ];
 
-class App {
+export default class App {
   constructor() {
     
     this._notes = [];
@@ -49,7 +49,7 @@ class App {
   return this._notes;
   }
   set notes(notes){
-  return (this._notes = notes);
+    this._notes = notes;
   }
   
   addTodo(obj) {
@@ -70,6 +70,7 @@ class App {
     const h2 = document.createElement("H2");
     const p = document.createElement("P");
     div.className = "main__card-todo";
+    div.setAttribute('draggable', 'true');
     h2.textContent = title;
     h2.className = "main__card-title";
     p.className = "main__card-body";
@@ -94,4 +95,8 @@ class App {
 
 }
 
-
+const a = new App();
+a.addTodo(notes[0]);
+a.addTodo(notes[1]);
+console.log(a._notes);
+a.renderNodesList();

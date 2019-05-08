@@ -6,9 +6,9 @@ export const deleteNote = (id) => {
             // localStorage.setItem("notes",JSON.stringify(arr));
             const newArr = arr.filter(el => el.id !== id);
             localStorage.setItem("notes",JSON.stringify(newArr));
-            resolve("success")
+            resolve("success");
         }else{
-            reject(new Error('Error'))
+            reject(new Error('Error'));
         }
     })
 }
@@ -18,11 +18,11 @@ export const addNote = (arr)=> {
 
     return new Promise((resolve, reject) => {
         if(arr){
-            localStorage.setItem('notes',JSON.stringify(arr))
-            resolve('success')
+            localStorage.setItem('notes',JSON.stringify(arr));
+            resolve('success');
         } else {
-            reject( new Error('error'))
-        }})
+            reject( new Error('error'));
+        }});
 }
 
 

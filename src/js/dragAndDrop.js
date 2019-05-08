@@ -2,7 +2,7 @@
 export default class DragAndDrop {
     constructor() {
         this.refs = {};
-        this.refs.todoElement = null;
+        this.refs.todoElement;
         this.refs.notes = [...document.querySelectorAll('.main__card-todo')];
         this.refs.notesContainer = [...document.querySelectorAll('.main__card')];
         this.dragAndDrop = this.dragAndDrop.bind(this);
@@ -55,15 +55,22 @@ export default class DragAndDrop {
     }
     
     dragDrop(e) {
-        if(e.target.nodeName === 'H2') {
-            e.target.parentNode.append(this.refs.todoElement);
-        } else {
-            e.target.append(this.refs.todoElement);
+         if(!e.target.classList.contains('main__card-todo') 
+         && !e.target.classList.contains('main__card-title') 
+         && !e.target.classList.contains('main__card-body')) {
+             console.log(e.target.classList.contains('main__card-title'));
+             
+            if(e.target.nodeName === 'H2') {
+                e.target.parentNode.append(this.refs.todoElement);
+            }  else {
+                e.target.append(this.refs.todoElement);
+            }
+            
+            if(e.target.dataset.column === 'completed') {
+                console.log('ok');
+            }
         }
-        
-        if(e.target.dataset.column === 'completed') {
-            console.log('ok');
-        }
+       
     }
 }
 
