@@ -1,6 +1,4 @@
-@import "./button.scss";
-@import "./note.scss";
-
+@import './dragAndDrop.scss';
 $baseFontSize: 16px;
 
 @function pxToRem($val) {
@@ -57,6 +55,7 @@ body {
 }
 
 .main__card {
+  position: relative;
   padding: 1rem 0;
   flex-basis: 30%;
   height: 100%;
@@ -67,8 +66,8 @@ body {
 .main__card-todo {
   width: 90%;
   margin: 0 auto;
-  box-shadow: 0 0 18px 0 rgba(0,0,0,.1);
-  padding: 1rem;
+  box-shadow: 0 0 9px 0 rgba(0,0,0,.3);
+  padding: .5rem;
   margin-bottom: 1rem;
   &:last-of-type {
     margin-bottom: 0;
@@ -77,4 +76,6 @@ body {
 
 .main__card-title {
   font-size: 1rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
