@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Notepad</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Notepad</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href='./sass/main.scss' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <h1>Hello</h1>
+  <main>
+    <section class="modal_window">
+      <div class="main__title">
+        <span>Заголовок</span>
+        <input type="text" class="main_title_input">
+      </div>
+      <div class="main_content">
+        <span>Содержание</span>
+        <textarea class="main_content_text" rows="6">
+        </textarea>
+      </div>
+    </section>
+    <button class="btn" type="submit">choose your destiny</button>
+    <a class="btn2" href="#">+</a>
+  </main>
+
+
+
+</body>
+
 </html>
