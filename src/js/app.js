@@ -1,8 +1,7 @@
 class App {
   constructor() {
-
-  }
-  dragAndDrop() {
     
   }
 }
+
+
