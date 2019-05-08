@@ -1,4 +1,7 @@
 @import './dragAndDrop.scss';
+@import "./button.scss";
+@import "./note.scss";
+
 $baseFontSize: 16px;
 
 @function pxToRem($val) {
@@ -23,7 +26,7 @@ ul {
 
 body {
   background-color: #3498db;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
