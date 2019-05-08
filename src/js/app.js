@@ -1,4 +1,5 @@
 import { genarateId } from "./utils/helper";
+import {deleteNote} from "./utils/api";
 
 export const notes = [
   {
@@ -34,7 +35,7 @@ export const notes = [
 notes.length;
 class App {
   constructor() {
-    this._notes = notes;
+    this._notes = [];
     this.refs = {};
     this.refs.noteList = document.querySelector(".main__card-todo");
     this.refs.start = document.querySelector(`.main__card__start`);

@@ -1,4 +1,4 @@
-const deleteNote = (id) => {
+export const deleteNote = (id) => {
     return new Promise((resolve,reject) => {
         if(typeof id === "number"){
             let arr = JSON.parse(localStorage.getItem('notes'));
