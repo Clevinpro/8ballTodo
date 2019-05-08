@@ -1,4 +1,4 @@
-Pixi APP
+8ballTodo
 =============
 
 Installation (for develop)
