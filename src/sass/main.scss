@@ -23,7 +23,8 @@ body {
   .favorites {
       margin-top:15px;
       margin-bottom:15px;
-      font-family: 'Rubik', sans-serif;
+      font-family: 'Righteous', cursive;
+      color:black;
       
   }
 
@@ -59,6 +60,7 @@ body {
   border-radius: 15px;
   top:50%;
   left:50%;
+  
 }
 
 .modal_wrapper {
@@ -105,8 +107,10 @@ body {
 
 .favCheckbox {
     position: absolute;
-    right: 124px;
-    bottom: 66.5px;
+    right: 119px;
+    bottom: 64.5px;
+    font-family: 'Righteous', cursive;
+
     
     
 }
@@ -127,7 +131,7 @@ body {
   font-weight:500;
   border-width:1px;
   border-color:grey;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Righteous', cursive;
 }
 // .btn2 {
 //     text-decoration: none;
@@ -246,13 +250,16 @@ body {
 .title {
     margin-bottom:15px;
     margin-top:15px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Righteous', cursive;
+    color:black;
+
 }
 
 .content{
     margin-bottom:15px;
     margin-top:15px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Righteous', cursive;
+    color:black;
 }
 
 
