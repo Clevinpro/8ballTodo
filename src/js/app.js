@@ -48,7 +48,7 @@ export default class App {
     const p = document.createElement("P");
     div.className = "main__card-todo";
     div.setAttribute('draggable', 'true');
-    div.setAttribute('id', `${id}`);
+    div.setAttribute('data-id', `${id}`);
     h2.textContent = title;
     h2.className = "main__card-title";
     p.className = "main__card-body";
@@ -119,7 +119,7 @@ export default class App {
     target.append(this.refs.todoElement);
 
     if (target.classList.contains('main__card__start')) {
-      let curentElementId = Number(this.refs.todoElement.getAttribute('id'));
+      let curentElementId = Number(this.refs.todoElement.dataset.id);
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
             el.inProgress = false;
@@ -129,7 +129,7 @@ export default class App {
       );
       addNote(this._notes);
     } else if (target.classList.contains('main__card__progress')) {
-      let curentElementId = Number(this.refs.todoElement.getAttribute('id'));
+      let curentElementId = Number(this.refs.todoElement.dataset.id);
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
             el.inProgress = true;
@@ -139,7 +139,7 @@ export default class App {
     );
       addNote(this._notes);
     } else if (target.classList.contains('main__card__completed')) {
-      let curentElementId = Number(this.refs.todoElement.getAttribute('id'));
+      let curentElementId = Number(this.refs.todoElement.dataset.id);
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
             el.inProgress = false;
