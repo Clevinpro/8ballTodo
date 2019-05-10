@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Notepad</title>
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-    />
+    /> -->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+   
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC&amp;subset=cyrillic"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -23,64 +28,18 @@
         />
       </a>
     </header>
+
     <main class="main">
       <div class="main__card-container">
-        <div class="main__card">
-          <div class="main__card-todo">
-            <h2 class="main__card-title">hello</h2>
-          </div>
-          <div class="main__card-todo">
-            <h2 class="main__card-title">hello</h2>
-          </div>
-          <div class="main__card-todo">
-            <h2 class="main__card-title">hello</h2>
-          </div>
-          <div class="main__card-todo">
-            <h2 class="main__card-title">hello</h2>
-          </div>
-          <div class="main__card-todo">
-            <h2 class="main__card-title">hello</h2>
-          </div>
-        </div>
-        
-        <div class="main__card">
-            <div class="main__card-todo">
-                <h2 class="main__card-title">hello</h2>
-              </div>
-              <div class="main__card-todo">
-                  <h2 class="main__card-title">hello</h2>
-                </div>
-                <div class="main__card-todo">
-                    <h2 class="main__card-title">hello</h2>
-                  </div>
-                  <div class="main__card-todo">
-                      <h2 class="main__card-title">hello</h2>
-                    </div>
-                    <div class="main__card-todo">
-                        <h2 class="main__card-title">hello</h2>
-                      </div>
-          
-          
-        </div>
-        <div class="main__card">
-            <div class="main__card-todo">
-                <h2 class="main__card-title">hello</h2>
-              </div>
-              <div class="main__card-todo">
-                  <h2 class="main__card-title">hello</h2>
-                </div>
-                <div class="main__card-todo">
-                    <h2 class="main__card-title">hello</h2>
-                  </div>
-                  <div class="main__card-todo">
-                      <h2 class="main__card-title">hello</h2>
-                    </div>
-                    <div class="main__card-todo">
-                        <h2 class="main__card-title">hello</h2>
-                      </div>
-        </div>
+        <div class="main__card main__card__start"></div>
+        <div class="main__card main__card__progress"></div>
+        <div
+          class="main__card main__card__completed"
+          data-column="completed"
+        ></div>
       </div>
     </main>
+
     <footer class="footer"></footer>
 
     <div class="modal_wrapper">
@@ -99,5 +58,25 @@
         <button class="btn" type="submit">add task</button>
       </section>
     </div>
+
+    <!-- _________________________________8ball -->
+
+    <section class="ball8">
+      <div class="stars"></div>
+      <div class="twinkling"></div>
+      <section class="wrapper">
+        <div class="ball">
+          <div class="circleHover">
+            <div class="text">
+              <p class="afor"></p>
+              <span class="autor"></span>
+            </div>
+          </div>
+          <div class="circle2">
+            <span>8</span>
+          </div>
+        </div>
+      </section>
+    </section>
   </body>
 </html>

@@ -1,9 +1,25 @@
-$baseFontSize: 16px;
+@import "./dragAndDrop.scss";
+@import "./button.scss";
+@import "./note.scss";
+@import "./ball8.scss";
 
+$baseFontSize: 16px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background: #1b2631;
   position: relative;
+  background-color: #3498db;
+  background-color: -webkit-radial-gradient(100px 100px, circle, #1f2327, #000);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .btn2 {
   text-decoration: none;
   outline: none;
@@ -27,40 +43,21 @@ body {
       color:black;
       
   }
-
-//   .btn2:after {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   width: 100%;
-//   height: 100%;
-//   margin: auto;
-//   border: 3px solid rgba(0, 0, 0, 0);
-//   transition: 0.4s;
   
-// }
-// a.btn2:hover:after {
-//   border-color: black;
-//   width: calc(100% - 10px);
-//   height: calc(100% + 10px);
-// }
+
+
 
 .modal_window {
   height: 300px;
   width: 400px;
-  // display: none;
   align-content: center;
   border: black 2px solid;
-  background-color:skyblue;
+  background-color: skyblue;
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 15px;
-  top:50%;
-  left:50%;
-  
+  top: 50%;
+  left: 50%;
 }
 
 .modal_wrapper {
@@ -72,10 +69,21 @@ body {
 }
 
 .main__card-todo {
-    border-radius:15px;
-    border-color:grey;
-    border-width:1.5px;
-    border-style:solid;
+  border-radius: 15px;
+  border-color: grey;
+  border-width: 1.5px;
+  border-style: solid;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  &:last-of-type {
+    smargin-bottom: 0;
+  }
 }
 
 .show {
@@ -85,36 +93,40 @@ body {
 }
 
 .main_title_input {
-    border-radius:15px;
-    width:90%;
-    margin-right: 15px;
-    margin-left: 15px;
-    border-color:grey;
-    border-width:1px;
-    height: 20px;
-
+  border-radius: 15px;
+  width: 90%;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-color: grey;
+  border-width: 1px;
+  height: 20px;
 }
 
-.main_content_text{
-    border-radius:15px;
-    width:90%;
-    margin-right: 15px;
-    margin-left: 15px;
-    border-color:grey;
-    border-width:1px;
-    position:relative;
+.main_content_text {
+  border-radius: 15px;
+  width: 90%;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-color: grey;
+  border-width: 1px;
+  position: relative;
 }
 
 .favCheckbox {
-    position: absolute;
-    right: 119px;
-    bottom: 64.5px;
-    font-family: 'Righteous', cursive;
+// <<<<<<< HEAD
+//     position: absolute;
+//     right: 119px;
+//     bottom: 64.5px;
+//     font-family: 'Righteous', cursive;
 
     
     
+// =======
+  position: absolute;
+  right: 124px;
+  bottom: 66.5px;
+
 }
-
 
 .main__title,
 .main_content {
@@ -125,7 +137,7 @@ body {
 
 .btn {
   width: 50%;
-  height:20px;
+  height: 20px;
   border-radius: 15px;
   padding-bottom: 3px;
   font-weight:500;
@@ -176,6 +188,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: 500;
+  border-width: 1px;
+  border-color: grey;
 }
 
 ul {
@@ -221,23 +236,26 @@ body {
 }
 
 .main__card {
+  position: relative;
   padding: 1rem 0;
   flex-basis: 30%;
   height: 100%;
   background-color: #fff;
   box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
-  border-radius:10px;
+  border-radius: 10px;
   border-style: solid;
-    border-width: 1.5px;
-    border-color: black;
+  border-width: 1.5px;
+  border-color: black;
+  box-shadow: 0 0 18px 0 rgba(0,0,0,.1);
 }
 
 .main__card-todo {
   width: 90%;
   margin: 0 auto;
-  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  box-shadow: 0 0 9px 0 rgba(0,0,0,.3);
+  padding: .5rem;
   margin-bottom: 1rem;
+  cursor: pointer;
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -245,9 +263,22 @@ body {
 
 .main__card-title {
   font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
+.main__card-fav {
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/Star.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0.1875rem;
+  right: 0.1875rem;
+}
 .title {
+
     margin-bottom:15px;
     margin-top:15px;
     font-family: 'Righteous', cursive;
@@ -260,6 +291,7 @@ body {
     margin-top:15px;
     font-family: 'Righteous', cursive;
     color:black;
+
 }
 
 
