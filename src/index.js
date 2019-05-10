@@ -1,6 +1,15 @@
 import "./sass/main.scss";
 import app from "./js/app";
-import DragAndDrop from './js/dragAndDrop';
+import { loadNotes } from './js/utils/api';
 
-const a = new DragAndDrop();
+
+const todo = new app();
+
+loadNotes().then(data => {
+  if(data && data.length > 0) {
+    todo.notes = data;
+    todo.renderNodesList();
+  };
+  
+});
 
