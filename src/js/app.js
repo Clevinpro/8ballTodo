@@ -1,3 +1,4 @@
+import {addNote} from "./create"
 import { genarateId } from "./utils/helper";
 
 export const notes = [

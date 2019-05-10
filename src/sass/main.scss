@@ -3,6 +3,165 @@
 
 $baseFontSize: 16px;
 
+body {
+  background: #1b2631;
+  position: relative;
+}
+
+.btn2 {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 10px 30px;
+  position: relative;
+  border: 3px solid black;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.4s;
+  border-radius: 15px;
+  border-width: 1.5px;
+  background-color: white;
+}
+
+.favorites {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: "Rubik", sans-serif;
+}
+
+//   .btn2:after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 100%;
+//   margin: auto;
+//   border: 3px solid rgba(0, 0, 0, 0);
+//   transition: 0.4s;
+
+// }
+// a.btn2:hover:after {
+//   border-color: black;
+//   width: calc(100% - 10px);
+//   height: calc(100% + 10px);
+// }
+
+.modal_window {
+  height: 300px;
+  width: 400px;
+  // display: none;
+  align-content: center;
+  border: black 2px solid;
+  background-color: skyblue;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+}
+
+.modal_wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  display: none;
+}
+
+.main__card-todo {
+  border-radius: 15px;
+  border-color: grey;
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+.show {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+
+.main_title_input {
+  border-radius: 15px;
+  width: 90%;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-color: grey;
+  border-width: 1px;
+  height: 20px;
+}
+
+.main_content_text {
+  border-radius: 15px;
+  width: 90%;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-color: grey;
+  border-width: 1px;
+  position: relative;
+}
+
+.favCheckbox {
+  position: absolute;
+  right: 124px;
+  bottom: 66.5px;
+}
+
+.main__title,
+.main_content {
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.btn {
+  width: 50%;
+  height: 20px;
+  border-radius: 15px;
+  padding-bottom: 3px;
+  font-weight: 500;
+  border-width: 1px;
+  border-color: grey;
+  font-family: "Rubik", sans-serif;
+}
+// .btn2 {
+//     text-decoration: none;
+//    outline: none;
+//    display: inline-block;
+//    margin: 10px 20px;
+//    position: relative;
+//    padding: 10px 30px;
+//    border: 2px solid #f1c40f;
+//    color: #f1c40f;
+//    font-family: 'Montserrat', sans-serif;
+//    transition: .4s;
+// }
+
+// .btn2:after {
+//     content: "";
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//    width: 100%;
+//    height: 100%;
+//    margin: auto;
+//    border: 2px solid rgba(0,0,0,0);
+//    transition: .4s;
+// }
+
+// .btn2:after:hover {
+//     border-color: #f1c40f;
+//    width: calc(100% - 10px);
+//    height: calc(100% + 10px);
+
+// }
+
 @function pxToRem($val) {
   $remSize: $val/$baseFontSize;
   @return #{$remSize}rem;
@@ -25,7 +184,8 @@ ul {
 
 body {
   background-color: #3498db;
-  // height: 100vh;
+  background-color: -webkit-radial-gradient(100px 100px, circle, #1f2327, #000);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -62,6 +222,10 @@ body {
   height: 100%;
   background-color: #fff;
   box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: black;
 }
 
 .main__card-todo {
@@ -87,6 +251,17 @@ body {
   background-position: center;
   background-size: cover;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0.1875rem;
+  right: 0.1875rem;
+}
+.title {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-family: "Rubik", sans-serif;
+}
+
+.content {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-family: "Rubik", sans-serif;
 }

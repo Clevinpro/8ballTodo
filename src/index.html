@@ -9,9 +9,23 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <a class="btn2" href="#">
+        <img
+          class="star"
+          src="../src/images/images.png"
+          alt=""
+          height="50"
+          width="50"
+        />
+      </a>
+    </header>
     <main class="main">
       <div class="main__card-container">
         <div class="main__card main__card__start"></div>
@@ -20,5 +34,23 @@
       </div>
     </main>
     <footer class="footer"></footer>
+
+    <div class="modal_wrapper">
+      <section class="modal_window">
+        <div class="main__title">
+          <span class="title">title</span>
+          <input type="text" class="main_title_input" />
+        </div>
+        <div class="main_content">
+          <span class="content">content</span>
+          <textarea class="main_content_text" rows="6"></textarea>
+          <span class="favorites">
+            add to favorites <input type="checkbox" class="favCheckbox"
+          /></span>
+        </div>
+        <button class="btn" type="submit">add task</button>
+      </section>
+    </div>
+ 
   </body>
 </html>
