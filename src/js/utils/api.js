@@ -26,3 +26,13 @@ export const addNote = (arr)=> {
 }
 
 
+export const loadNotes = () => {
+    return new Promise((resolve, reject) => {
+        let arr = localStorage.getItem('notes');
+        if(arr !== undefined){
+            resolve(JSON.parse(arr));
+        } else {
+            reject( new Error('error'));
+        }});
+}
+

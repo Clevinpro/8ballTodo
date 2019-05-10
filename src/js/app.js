@@ -1,7 +1,42 @@
-import { genarateId, generatePhrase } from "./utils/helper";
-import {deleteNote ,addNote} from "./utils/api";
+import { generatePhrase, genarateId } from "./utils/helper";
+import {deleteNote , addNote} from "./utils/api";
 import quotes from "../notes.json";
-console.log(quotes);
+// console.log(quotes);
+
+
+
+export const notes = [
+  {
+    id: 1,
+    title: "First",
+    body: "1111111",
+    inProgress: false,
+    completed: false,
+    favorite: true
+  },
+  {
+    id: 2,
+    title: "Second",
+    body: "2222222",
+    inProgress: false,
+    completed: false
+  },
+  {
+    id: 3,
+    title: "Third",
+    body: "333333333",
+    inProgress: true,
+    completed: false
+  },
+  {
+    id: 4,
+    title: "Fourth",
+    body: "444444444444",
+    inProgress: true,
+    completed: false
+  }
+];
+
 
 export default class App {
   constructor() {
@@ -13,17 +48,24 @@ export default class App {
     this.refs.start = document.querySelector(`.main__card__start`);
     this.refs.inprogress = document.querySelector(`.main__card__progress`);
     this.refs.completed = document.querySelector(`.main__card__completed`);
-    this.refs.afor = document.querySelector('.afor')
-    this.refs.circle = document.querySelector('.circleHover')
-    this.refs.text = document.querySelector('.text')
-    this.refs.circle2 = document.querySelector('.circle2')
-    this.refs.autor = document.querySelector('.autor')
-    this.refs.ball8 = document.querySelector('.ball8')
+    this.refs.afor = document.querySelector('.afor');
+    this.refs.circle = document.querySelector('.circleHover');
+    this.refs.text = document.querySelector('.text');
+    this.refs.circle2 = document.querySelector('.circle2');
+    this.refs.autor = document.querySelector('.autor');
+    this.refs.ball8 = document.querySelector('.ball8');
 
-
-
+    // Modal refs
+    this.refs.add = document.querySelector(`.btn2`);
+    this.refs.modalWrapper = document.querySelector(`.modal_wrapper`);
+    this.refs.modal = document.querySelector(`.modal_window`);
+    this.refs.checkbox = document.querySelector(`.favCheckbox`);
+    this.refs.btnAdd = document.querySelector(`.btn`);
+    this.refs.body = document.querySelector(`body`);
+    this.refs.h2 = document.querySelector(`.main_title_input`);
+    this.refs.p = document.querySelector(`.main_content_text`);
+    
     this.renderNodesList = this.renderNodesList.bind(this);
-
     this.dragAndDrop = this.dragAndDrop.bind(this);
     this.dragStart = this.dragStart.bind(this);
     this.dragEnd = this.dragEnd.bind(this);
@@ -32,17 +74,27 @@ export default class App {
     this.dragLeave = this.dragLeave.bind(this);
     this.dragDrop = this.dragDrop.bind(this);
     this.taskComplited = this.taskComplited.bind(this);
+    this.addTodo = this.addTodo.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.handleCreateNote = this.handleCreateNote.bind(this);
+
+    // Listeners
+
+    this.refs.body.addEventListener(`click`, this.showModal);
+    this.refs.btnAdd.addEventListener(`click`, this.handleCreateNote);
   }
 
-  get notes(){
-  return this._notes;
+  get notes() {
+    return this._notes;
   }
-  set notes(notes){
+
+  set notes(notes) {
     this._notes = notes;
   }
 
   addTodo(obj) {
     this._notes.push(obj);
+    this.renderNodesList();
     addNote(this._notes);
   }
 
@@ -53,8 +105,9 @@ export default class App {
 
   editTodo() {}
 
-  createNoteContent({ title, body, id }) {
+  createNoteContent({ title, body, favorite, id}) {
     const div = document.createElement("DIV");
+    const fav = document.createElement("DIV");
     const h2 = document.createElement("H2");
     const p = document.createElement("P");
     div.className = "main__card-todo";
@@ -66,15 +119,23 @@ export default class App {
     p.textContent = body;
     div.appendChild(h2);
     div.appendChild(p);
+    if (favorite) {
+      // console.log(favorite);
+      fav.className = "main__card-fav";
+      div.appendChild(fav);
+    }
 
     return div;
   }
 
   renderNodesList() {
+    this.refs.start.innerHTML = null;
+    this.refs.inprogress.innerHTML = null;
+    this.refs.completed.innerHTML = null;
     this._notes.forEach(el => {
       if (el.inProgress) {
         this.refs.inprogress.append(this.createNoteContent(el));
-      } else if (el.complted) {
+      } else if (el.completed) {
         this.refs.completed.append(this.createNoteContent(el));
       } else {
         this.refs.start.append(this.createNoteContent(el));
@@ -134,7 +195,7 @@ export default class App {
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
             el.inProgress = false;
-            el.complted = false;
+            el.completed = false;
           }
         }
       );
@@ -144,7 +205,7 @@ export default class App {
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
             el.inProgress = true;
-            el.complted = false;
+            el.completed = false;
           }
       }
     );
@@ -154,7 +215,7 @@ export default class App {
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
             el.inProgress = false;
-            el.complted = true;
+            el.completed = true;
           }
       }
     );
@@ -209,8 +270,52 @@ export default class App {
     }, 9000);
   }
 
+  showModal(el) {
+    console.log(el.target);
+    if (el.target === this.refs.modalWrapper) {
+      this.refs.modalWrapper.classList.toggle(`show`);
+    } else if (el.target.closest(".btn2") === this.refs.add || el.target === this.refs.add) {
+      this.refs.modalWrapper.classList.toggle(`show`);
+    } else if (el.target === this.refs.btnAdd) {
+      if (this.refs.h2.value === "" || this.refs.p.value === "") {
+        alert(`Заполните все поля`);
+      } else {
+        this.refs.modalWrapper.classList.toggle(`show`);
+        this.refs.h2.value = null;
+        this.refs.p.value = null;
+      }
+    }
+  };
+  
+  handleCreateNote() {
+    const obj = {
+      id: genarateId(this._notes),
+      title: this.refs.h2.value,
+      body: this.refs.p.value,
+      inProgress: false,
+      completed: false,
+      favorite: this.refs.checkbox.checked
+    };
+  
+    if (this.refs.h2.value !== `` && this.refs.p.value !== ``) {
+      console.log(obj);
+  
+      this.addTodo(obj);
 
+    }
+  };
 
 
 }
+// const app = new App();
+// app.renderNodesList();
+
+// genarateId(notes);
+
+// const a = new App();
+// a.addTodo(notes[0]);
+// a.addTodo(notes[1]);
+// console.log(a._notes);
+// a.renderNodesList();
+
 
