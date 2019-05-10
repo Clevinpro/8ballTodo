@@ -15,25 +15,37 @@ body {
   color: black;
   font-family: "Montserrat", sans-serif;
   transition: 0.4s;
-}
-.btn2:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  border: 3px solid rgba(0, 0, 0, 0);
-  transition: 0.4s;
-}
-a.btn2:hover:after {
-  border-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% + 10px);
-}
+  border-radius: 15px;
+  border-width:1.5px;
+  background-color:white;
+  }
+
+  .favorites {
+      margin-top:15px;
+      margin-bottom:15px;
+      font-family: 'Rubik', sans-serif;
+      
+  }
+
+//   .btn2:after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 100%;
+//   margin: auto;
+//   border: 3px solid rgba(0, 0, 0, 0);
+//   transition: 0.4s;
+  
+// }
+// a.btn2:hover:after {
+//   border-color: black;
+//   width: calc(100% - 10px);
+//   height: calc(100% + 10px);
+// }
 
 .modal_window {
   height: 300px;
@@ -41,9 +53,10 @@ a.btn2:hover:after {
   // display: none;
   align-content: center;
   border: black 2px solid;
-  background-color: aqua;
+  background-color:skyblue;
   position: absolute;
   transform: translate(50%, 50%);
+  border-radius: 15px;
 }
 
 .modal_wrapper {
@@ -54,11 +67,48 @@ a.btn2:hover:after {
   display: none;
 }
 
+.main__card-todo {
+    border-radius:15px;
+    border-color:grey;
+    border-width:1.5px;
+    border-style:solid;
+}
+
 .show {
   display: flex;
   flex-flow: column wrap;
   text-align: center;
 }
+
+.main_title_input {
+    border-radius:15px;
+    width:90%;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-color:grey;
+    border-width:1px;
+    height: 20px;
+
+}
+
+.main_content_text{
+    border-radius:15px;
+    width:90%;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-color:grey;
+    border-width:1px;
+    position:relative;
+}
+
+.favCheckbox {
+    position: absolute;
+    right: 124px;
+    bottom: 66.5px;
+    
+    
+}
+
 
 .main__title,
 .main_content {
@@ -69,6 +119,13 @@ a.btn2:hover:after {
 
 .btn {
   width: 50%;
+  height:20px;
+  border-radius: 15px;
+  padding-bottom: 3px;
+  font-weight:500;
+  border-width:1px;
+  border-color:grey;
+  font-family: 'Rubik', sans-serif;
 }
 // .btn2 {
 //     text-decoration: none;
@@ -125,7 +182,7 @@ ul {
 }
 
 body {
-  background-color: #3498db;
+  background-color: -webkit-radial-gradient(100px 100px, circle, #1f2327, #000);;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -163,6 +220,10 @@ body {
   height: 100%;
   background-color: #fff;
   box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
+  border-radius:10px;
+  border-style: solid;
+    border-width: 1.5px;
+    border-color: black;
 }
 
 .main__card-todo {
@@ -179,3 +240,17 @@ body {
 .main__card-title {
   font-size: 1rem;
 }
+
+.title {
+    margin-bottom:15px;
+    margin-top:15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.content{
+    margin-bottom:15px;
+    margin-top:15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+

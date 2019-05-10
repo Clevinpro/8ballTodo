@@ -7,9 +7,10 @@ const h2 = document.querySelector(`.main_title_input`);
 const p = document.querySelector(`.main_content_text`);
 
 export const showModal = el => {
+  console.log(el.target)
   if (el.target === modalWrapper) {
     modalWrapper.classList.toggle(`show`);
-  } else if (el.target === add) {
+  } else if (el.target.closest('.btn2') === add || el.target === add) {
     modalWrapper.classList.toggle(`show`);
   } else if (el.target === btnAdd) {
     if (h2.value === "" || p.value === "") {
