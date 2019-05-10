@@ -1,5 +1,7 @@
-import { genarateId } from "./utils/helper";
+import { genarateId, generatePhrase } from "./utils/helper";
 import {deleteNote ,addNote} from "./utils/api";
+import quotes from "../notes.json";
+console.log(quotes);
 
 export default class App {
   constructor() {
@@ -11,6 +13,14 @@ export default class App {
     this.refs.start = document.querySelector(`.main__card__start`);
     this.refs.inprogress = document.querySelector(`.main__card__progress`);
     this.refs.completed = document.querySelector(`.main__card__completed`);
+    this.refs.afor = document.querySelector('.afor')
+    this.refs.circle = document.querySelector('.circleHover')
+    this.refs.text = document.querySelector('.text')
+    this.refs.circle2 = document.querySelector('.circle2')
+    this.refs.autor = document.querySelector('.autor')
+    this.refs.ball8 = document.querySelector('.ball8')
+
+
 
     this.renderNodesList = this.renderNodesList.bind(this);
 
@@ -21,6 +31,7 @@ export default class App {
     this.dragEnter = this.dragEnter.bind(this);
     this.dragLeave = this.dragLeave.bind(this);
     this.dragDrop = this.dragDrop.bind(this);
+    this.taskComplited = this.taskComplited.bind(this);
   }
 
   get notes(){
@@ -148,6 +159,58 @@ export default class App {
       }
     );
       addNote(this._notes);
+      setTimeout(() => this.taskComplited(), 1000)
+      
     }
   }
+
+  // _________________________8BALL____________
+  taskComplited() {
+    this.refs.ball8.classList.add('active');
+    const quote = quotes[generatePhrase(99) + ''];
+
+    console.log('quote', quote);
+    
+    const changePhrase = () => {
+        this.refs.afor.innerHTML = quote.quoteText;
+        if(quote.quoteAuthor !== ''){
+        this.refs.autor.innerHTML = '- ' + quote.quoteAuthor + ' -';
+        } 
+    }
+    
+    setTimeout(() => {
+        this.refs.circle.classList.add('circle')
+        this.refs.circle.classList.remove('circleHover')
+        
+    },1600)
+    
+    setTimeout(() => {
+        
+        this.refs.circle2.classList.add('circle2Hover')
+        
+    },1000)
+    
+    
+    
+    
+    setTimeout(() => {
+      changePhrase();
+        this.refs.text.classList.add('textHover')
+    },3200)
+    
+    // text.addEventListener('click', changePhrase)
+    setTimeout(() => {
+      this.refs.ball8.classList.remove('active');
+      this.refs.circle.classList.add('circleHover');
+      this.refs.circle2.classList.remove('circle2Hover');
+      this.refs.text.classList.remove('textHover');
+      this.refs.afor.innerHTML = "";
+      this.refs.autor.innerHTML = "";
+    }, 9000);
+  }
+
+
+
+
 }
+

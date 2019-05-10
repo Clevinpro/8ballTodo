@@ -1,28 +1,702 @@
 {
-    "initialNotes": [
-        {
-            "id": 1,
-            "title": "JavaScript essentials",
-            "body": "Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc",
-            "priority": "PRIORITY_TYPES.HIGH"
-        },
-        {
-            "id": 2,
-            "title": "Refresh HTML and CSS",
-            "body": "Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending.",
-            "priority": "PRIORITY_TYPES.NORMAL"
-        },
-        {
-            "id": 3,
-            "title": "Get comfy with Frontend frameworks",
-            "body": "First should get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos.",
-            "priority": "PRIORITY_TYPES.NORMAL"
-        },
-        {
-            "id": 4,
-            "title": "Winter clothes",
-            "body": "Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park.",
-            "priority": "PRIORITY_TYPES.LOW"
-        }
-    ]
-}
+    "0": {
+       "quoteText": "Ничто им не мешает, кроме самих себя. ",
+       "quoteAuthor": "Джек Лондон",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/f39c2ecd7e/"
+    },
+    "1": {
+       "quoteText": "Возможности плодоносят, если их опыляют способности и охраняют желания. ",
+       "quoteAuthor": "Эдуард Севрус",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/c06f47526e/"
+    },
+    "2": {
+       "quoteText": "Примите решение. Определитесь. Перестаньте вести н… вы имеете в своих руках. Начните сию же секунду.",
+       "quoteAuthor": "Брэд Дженсен",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/104071787f/"
+    },
+    "3": {
+       "quoteText": "Истина есть дочь времени, а не авторитета.",
+       "quoteAuthor": "Фрэнсис Бэкон",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/ddaae82c4b/"
+    },
+    "4": {
+       "quoteText": "Нельзя иметь все. Куда вы все это положите? ",
+       "quoteAuthor": "Стивен Райт",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/17c4d2004c/"
+    },
+    "5": {
+       "quoteText": "Мой друг никогда мне ничего не объяснял. Может быть, он думал, что я такой же, как он.",
+       "quoteAuthor": "Антуан де Сент-Экзюпери",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/c82d74a06b/"
+    },
+    "6": {
+       "quoteText": "Кто не бьет по воротам, голов не забивает.",
+       "quoteAuthor": "к/ф «Зубная Фея»",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/7fe66bb8ee/"
+    },
+    "7": {
+       "quoteText": "Каждый, кто хочет следовать пути воина, должен освободиться от страсти владеть и цепляться за вещи.",
+       "quoteAuthor": "Карлос Кастанеда",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/f5e819edfb/"
+    },
+    "8": {
+       "quoteText": "Продолжительность времени определяется нашим воспр…ироки, крохотная хижина вместит в себя целый мир.",
+       "quoteAuthor": "Хун Цзычен",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/4f46bf6511/"
+    },
+    "9": {
+       "quoteText": "Перевороты совершаются в тупиках.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/3ca9e656b8/"
+    },
+    "10": {
+       "quoteText": "Умеренность — основной принцип действия. Твердое ломается, острое тупится.",
+       "quoteAuthor": "Лао Дань",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/aaba609b5e/"
+    },
+    "11": {
+       "quoteText": "В любое время и в любом месте вы можете оказаться …, что раскрываетесь навстречу всем возможностям. ",
+       "quoteAuthor": "Чак Норрис",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/358c8d0319/"
+    },
+    "12": {
+       "quoteText": "Если рука не ранена, можно нести яд в руке. Яд не …ему ран. Кто сам не делает зла, не подвержен злу.",
+       "quoteAuthor": "Будда",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/82d187ba93/"
+    },
+    "13": {
+       "quoteText": "Если идти всё прямо да прямо, далеко не уйдешь... ",
+       "quoteAuthor": "Антуан де Сент-Экзюпери",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/3a4a9f5519/"
+    },
+    "14": {
+       "quoteText": "В жизни всё просто: если у тебя появляется желание…то желание осуществить. Всё возможно и достижимо!",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/8bcf40c00d/"
+    },
+    "15": {
+       "quoteText": "Великие возможности приходят ко всем, но многие даже не знают, что встретились с ними. ",
+       "quoteAuthor": "Уильям Чэннинг",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/270af139aa/"
+    },
+    "16": {
+       "quoteText": "Мелочи не играют решающей роли, они играют все. ",
+       "quoteAuthor": "Харви Маккей ",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/b98479607b/"
+    },
+    "17": {
+       "quoteText": "Нет на свете ничего совершенно ошибочного. Даже сл…ные часы дважды в сутки показывают точное время. ",
+       "quoteAuthor": "Пауло Коэльо",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/2bf7a4f1a5/"
+    },
+    "18": {
+       "quoteText": "Главная помеха для воина — внутренний диалог: это …Самые невероятные проекты становятся выполнимыми.",
+       "quoteAuthor": "Карлос Кастанеда",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/0fe6d0bbf8/"
+    },
+    "19": {
+       "quoteText": "Когда ищешь огонь, находишь его вместе с дымом. Ко…черпываешь воду из колодца, уносишь с собой луну.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/84aa0d26dd/"
+    },
+    "20": {
+       "quoteText": "Высшая ловкость состоит в том, чтобы всему знать истинную цену.",
+       "quoteAuthor": "Франсуа Де Ларошфуко",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/5543c6bfc0/"
+    },
+    "21": {
+       "quoteText": "Нет недостатка возможностей сделать свою жизнь так…ось. Есть лишь недостаток решимости сделать это. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/6d4c2017a2/"
+    },
+    "22": {
+       "quoteText": "Если я удерживаюсь от того, чтобы приставать к люд… не навязываю людям — они становятся сами собой. ",
+       "quoteAuthor": "Лао Цзы",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/4bc7e0fed7/"
+    },
+    "23": {
+       "quoteText": "Не нужно много слов, чтобы сказать правду. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/64c34759b8/"
+    },
+    "24": {
+       "quoteText": "Мы говорим, что идет время. Это неверно. Идем мы, …а, а не лодка, на которой мы плывем. Так и время.",
+       "quoteAuthor": "Лев Толстой",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/db2621ca7a/"
+    },
+    "25": {
+       "quoteText": "Если я в кого-нибудь влюблена и начинаю думать о н…снаружи только потому, что она есть внутри меня. ",
+       "quoteAuthor": "Шакти Гавэйн",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/6aabeb867b/"
+    },
+    "26": {
+       "quoteText": "«Это невозможно» — сказала Причина. «Это безрассуд…резала Гордость. «Попробуй...» — шепнула Мечта...",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/104afcfbe7/"
+    },
+    "27": {
+       "quoteText": "Психологическое правило гласит, что если внутрення…превращается во внешние события, подобные судьбе.",
+       "quoteAuthor": "Карл Юнг",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/6a52fc9414/"
+    },
+    "28": {
+       "quoteText": "Пусть будет нашей высшей целью одно: говорить, как чувствуем, и жить, как говорим. ",
+       "quoteAuthor": "Сенека",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/a1de2b9778/"
+    },
+    "29": {
+       "quoteText": "Тот, кто достиг вершины красноречия, знает, что кр… сути всех вещей. Поэтому он говорит без прикрас.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/d1a9f8179a/"
+    },
+    "30": {
+       "quoteText": "Трагедии сердца и тела — это плач детей из-за мелк… детей, и прими участие, если можешь, в их игре. ",
+       "quoteAuthor": "Шри Ауробиндо",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/2578c347e6/"
+    },
+    "31": {
+       "quoteText": "Воин действует, как если бы он знал, что он делает…ложью. Воин действует безупречно в обоих случаях.",
+       "quoteAuthor": "Карлос Кастанеда",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/a00f234ac3/"
+    },
+    "32": {
+       "quoteText": "Нет ничего мягче воды, однако она сокрушает скалу, она не сражается, она обтекает противника.",
+       "quoteAuthor": "к/ф «Запретное царство»",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/504261c962/"
+    },
+    "33": {
+       "quoteText": "Завтра не бывает. Проснулся и опять сегодня. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/ed3c5bf43a/"
+    },
+    "34": {
+       "quoteText": "Ум смотрит тысячами глаз, любовь глядит одним.",
+       "quoteAuthor": "Яков Полонский ",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/64e2f16763/"
+    },
+    "35": {
+       "quoteText": "Большинство людей проводят жизнь в плену, потому ч…, хотя настоящее — это то, с чего все начинается.",
+       "quoteAuthor": "Карлос Сантана",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/93cd4fb6ff/"
+    },
+    "36": {
+       "quoteText": "Мир не просто удивительнее, чем мы себе представля…— он удивительнее, чем мы можем себе представить.",
+       "quoteAuthor": "Джон Бердон Холдейн",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/9f8e127640/"
+    },
+    "37": {
+       "quoteText": "То, как мы видим проблему, — и есть проблема.",
+       "quoteAuthor": "Стивен Кови",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/a52164ed1b/"
+    },
+    "38": {
+       "quoteText": "Жить — значит медленно рождаться.",
+       "quoteAuthor": "Антуан де Сент-Экзюпери",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/c6e48c4ce3/"
+    },
+    "39": {
+       "quoteText": "Тот, кто хочет получить высокие духовные степени, …во думает лишь о том, как подкупить экзаменатора.",
+       "quoteAuthor": "Шри Ауробиндо",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/73df02f130/"
+    },
+    "40": {
+       "quoteText": "Подлинное счастье стоит недорого: если за него при…ится платить высокую цену, значит, это фальшивка.",
+       "quoteAuthor": "Коко Шанель",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/0af6200187/"
+    },
+    "41": {
+       "quoteText": "Всегда смотри на вещи со светлой стороны, а если таковых нет — натирай темные, пока не заблестят.",
+       "quoteAuthor": "Китайская пословица",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/78e38326ea/"
+    },
+    "42": {
+       "quoteText": "Мотивы наших действий бывают разные. Но самые удив…йствия совершаются, когда наш мотив — позитивный.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/a1b649229d/"
+    },
+    "43": {
+       "quoteText": "Три вещи нельзя скрыть: солнце, луну и истину... ",
+       "quoteAuthor": "Будда",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/c70fbdd5c9/"
+    },
+    "44": {
+       "quoteText": "Если вы не добились успеха сразу, попытайтесь еще … потом успокойтесь и живите в свое удовольствие. ",
+       "quoteAuthor": "Уильям Филдс",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/c204bbb1fa/"
+    },
+    "45": {
+       "quoteText": "Брать без ослепления, расставаться с легкостью.",
+       "quoteAuthor": "Марк Аврелий",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/b78752a765/"
+    },
+    "46": {
+       "quoteText": "Никакого рая, никакого ада, только эти бесконечные…оторые ты создаешь, пока думаешь, что так и надо.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/03d18c7453/"
+    },
+    "47": {
+       "quoteText": "Когда какая-нибудь вещь среди творений Бога кажетс…бы, что невозможно даже желать чего-либо лучшего.",
+       "quoteAuthor": "Готфрид Вильгельм Лейбниц ",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/92e66e7b71/"
+    },
+    "48": {
+       "quoteText": "Покуда ты не готов в любой момент видоизмениться, …орствовать и оставаться стойким в поисках истины.",
+       "quoteAuthor": "Свами Вивекананда",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/d210c9485e/"
+    },
+    "49": {
+       "quoteText": "Есть путь, но нет идущего по нему, есть только шаги, сделанные на пути.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/d77c317f5c/"
+    },
+    "50": {
+       "quoteText": "Если ваши нравственные устои вгоняют вас в тоску, знайте: ваши нравственные устои никуда не годятся.",
+       "quoteAuthor": "Роберт Льюис Стивенсон",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/9cfc2b9145/"
+    },
+    "51": {
+       "quoteText": "Мужчина может быть счастлив с любой женщиной, кроме той, в которую он влюблен. ",
+       "quoteAuthor": "Оскар Уайльд",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/3dd4799e0d/"
+    },
+    "52": {
+       "quoteText": "Когда ты проснулся сегодня утром, о чём была твоя …году? Хочешь измениться — измени свои приоритеты.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/08083a69d7/"
+    },
+    "53": {
+       "quoteText": "Если любишь жизнь, не теряй времени, — время есть то, из чего сделана жизнь. ",
+       "quoteAuthor": "Брюс Ли",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/ed3df53ad8/"
+    },
+    "54": {
+       "quoteText": "Гений — один процент вдохновения и девяносто девять процентов пота. ",
+       "quoteAuthor": "Томас Эдисон",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/f018290f89/"
+    },
+    "55": {
+       "quoteText": "Ничто не существует; если даже оно и существует, т…о оно не высказываемо и необъяснимо для другого. ",
+       "quoteAuthor": "Горгий",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/87b2dd44ea/"
+    },
+    "56": {
+       "quoteText": "Идеи — прообразы чувственных вещей, вечные, неизме…огибают, а потому лишены истинного существования.",
+       "quoteAuthor": "Платон",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/281a644781/"
+    },
+    "57": {
+       "quoteText": "Вы должны уже сегодня относиться к себе как к человеку, добившемуся успеха. ",
+       "quoteAuthor": "Джим Рон",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/cebd43cb0f/"
+    },
+    "58": {
+       "quoteText": "Страх — первый неизбежный враг, которого человек должен победить на пути к знанию. ",
+       "quoteAuthor": "Карлос Кастанеда",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/223d2f7ec6/"
+    },
+    "59": {
+       "quoteText": "Пока дело имеет на своей стороне хоть одну душу, о…ющую несокрушимой верой, оно не может погибнуть. ",
+       "quoteAuthor": "Шри Ауробиндо",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/80db4332db/"
+    },
+    "60": {
+       "quoteText": "Странно, каких только путей мы не выбираем, чтобы скрыть свои истинные чувства.",
+       "quoteAuthor": "Эрих Мария Ремарк",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/40fbb6d98a/"
+    },
+    "61": {
+       "quoteText": "Случай — псевдоним Бога, когда он не хочет подписаться своим собственным именем. ",
+       "quoteAuthor": "Анатоль Франс",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/a0f8f5ed95/"
+    },
+    "62": {
+       "quoteText": "Ты говоришь, что вокруг тебя все дурные люди. Если…о это верный признак того, что ты сам очень плох.",
+       "quoteAuthor": "Лев Толстой",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/0055b36238/"
+    },
+    "63": {
+       "quoteText": "Всякое достоинство, всякая сила спокойны — именно потому, что уверены в самих себе.",
+       "quoteAuthor": "Виссарион Григорьевич Белинский",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/28825c5156/"
+    },
+    "64": {
+       "quoteText": "Где мало слов, там вес они имеют.",
+       "quoteAuthor": "Уильям Шекспир ",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/44bbbc1564/"
+    },
+    "65": {
+       "quoteText": "Перестань думать, как бы получить любовь, и начина… отдавать. Отдавая, ты получаешь. Иного пути нет.",
+       "quoteAuthor": "OSHO",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/79f5cb68de/"
+    },
+    "66": {
+       "quoteText": "Отказ от сделки лучше плохой сделки. ",
+       "quoteAuthor": "Роберт Кийосаки",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/ded801cdf4/"
+    },
+    "67": {
+       "quoteText": "Я не могу управлять направлением ветра, но всегда … так поставить паруса, чтобы достичь своей цели. ",
+       "quoteAuthor": "Оскар Уайльд",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/4a6d14b88f/"
+    },
+    "68": {
+       "quoteText": "Научитесь отделять более важное от менее важного. …ют слишком большое значение незначительным вещам.",
+       "quoteAuthor": "Джим Рон",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/3a6c07db9d/"
+    },
+    "69": {
+       "quoteText": "Наши эмоции — мощная сила. Если их не контролирова…они становятся самореализующимися пророчествами. ",
+       "quoteAuthor": "Роберт Кийосаки",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/27380faeec/"
+    },
+    "70": {
+       "quoteText": "Это безумство делать одно и то же раз за разом, и при этом ждать разных результатов. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/2cca6a89be/"
+    },
+    "71": {
+       "quoteText": "Жизнь — это слишком важная вещь чтобы рассуждать о ней серьезно. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/d17e29e23f/"
+    },
+    "72": {
+       "quoteText": "Когда вам становится очень туго, и все оборачивает…енно в такие моменты наступает перелом в борьбе. ",
+       "quoteAuthor": "Гарриэт Бичер-Стоу",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/dc9bbcd172/"
+    },
+    "73": {
+       "quoteText": "Если ваши взгляды не охватывают подлинную страсть …овится пустотой, которую почти невозможно скрыть.",
+       "quoteAuthor": "Кой-Вин",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/c2b355fadf/"
+    },
+    "74": {
+       "quoteText": "Груз становится легким, когда несешь его с покорностью. ",
+       "quoteAuthor": "Овидий",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/04c475031a/"
+    },
+    "75": {
+       "quoteText": "Помни, что если ты можешь сделать хорошее дело, ок…йчас, потому что пройдет случай и не возвратится.",
+       "quoteAuthor": "Лев Толстой",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/5a22eb0b66/"
+    },
+    "76": {
+       "quoteText": "Мои результаты мне давно известны, я только не знаю, как я к ним приду. ",
+       "quoteAuthor": "Иоганн Карл Фридрих Гаусс",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/d1026c3eca/"
+    },
+    "77": {
+       "quoteText": "Ты — выдумка для тех “я”, которые выбирают другие … для тебя. Вам есть чему поучиться друг у друга. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/884eb5a71e/"
+    },
+    "78": {
+       "quoteText": "От книжной мудрости глупец тупее вдвое. ",
+       "quoteAuthor": "Мольер",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/8638b50de5/"
+    },
+    "79": {
+       "quoteText": "Продолжительность времени зависит от нашего настро…азмеры пространства обусловлены нашим сознанием. ",
+       "quoteAuthor": "Хун Цзычэн",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/dc9205048f/"
+    },
+    "80": {
+       "quoteText": "Если ты рождён без крыльев, не мешай им расти. ",
+       "quoteAuthor": "Коко Шанель",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/49913311bf/"
+    },
+    "81": {
+       "quoteText": "Что можешь сделать — сделай сейчас; кто знает, сможешь ли ты это сделать потом?",
+       "quoteAuthor": "Вантала",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/687c53adcb/"
+    },
+    "82": {
+       "quoteText": "Пренебреги клеветой — и она зачахнет. ",
+       "quoteAuthor": "Тацит",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/b188dcbbf1/"
+    },
+    "83": {
+       "quoteText": "Когда Вы проигрываете, не упускайте урок.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/013e84899b/"
+    },
+    "84": {
+       "quoteText": "Всегда кажется, что нас любят за то, что мы хороши… любят нас оттого, что хороши те, кто нас любит. ",
+       "quoteAuthor": "Лев Толстой",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/e8a351ea9a/"
+    },
+    "85": {
+       "quoteText": "Если ты хочешь, чтобы тебе всегда угождали, прислуживай себе сам.",
+       "quoteAuthor": "Бенджамин Франклин",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/5a516d7abd/"
+    },
+    "86": {
+       "quoteText": "Многое прощая, сильный становится еще сильнее.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/c2749efdfe/"
+    },
+    "87": {
+       "quoteText": "Неудачи дают только повод начать снова и более умн…еудача не позорна: позорен страх перед неудачей. ",
+       "quoteAuthor": "Генри Форд",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/e88f18b545/"
+    },
+    "88": {
+       "quoteText": "Самый бедный — это тот, кто не умеет пользоваться тем, чем располагает. ",
+       "quoteAuthor": "Пьер Буаст",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/c83d1c1968/"
+    },
+    "89": {
+       "quoteText": "Ты — выдумка для тех “я”, которые выбирают другие … для тебя. Вам есть чему поучиться друг у друга. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/884eb5a71e/"
+    },
+    "90": {
+       "quoteText": "Если ты способен выдумать что-то, ты можешь и сделать это.",
+       "quoteAuthor": "Уолт Дисней",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/4831a09c47/"
+    },
+    "91": {
+       "quoteText": "Лучший способ укрепить вашу самооценку — это делать то, что вы считаете нужным. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/fa6e573026/"
+    },
+    "92": {
+       "quoteText": "Обижаться и негодовать, это все равно, что выпить яд в надежде, что он убьет твоих врагов. ",
+       "quoteAuthor": "Нельсон Мандела",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/a4116dd809/"
+    },
+    "93": {
+       "quoteText": "Трус не способен проявить любовь, это прерогатива храброго. ",
+       "quoteAuthor": "Махатма Ганди",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/3ebec0785b/"
+    },
+    "94": {
+       "quoteText": "Если вы хотите высоко подняться, пользуйтесь собст…нести себя, не садитесь на чужие плечи и головы! ",
+       "quoteAuthor": "Фридрих Ницше",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/0a877842c5/"
+    },
+    "95": {
+       "quoteText": "Мысль — это оружие, которым человек пользуется для того, чтобы действовать. ",
+       "quoteAuthor": "Айн Рэнд",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/7fa14f7a14/"
+    },
+    "96": {
+       "quoteText": "Все люди и все события твоей жизни пришли в нее по… Теперь тебе надо выбрать, как с ними поступить. ",
+       "quoteAuthor": "Ричард Бах",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/6427812ba3/"
+    },
+    "97": {
+       "quoteText": "Оптимист везде видит зеленый свет, пессимист — кра…нно мудрый человек предпочитает быть дальтоником.",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/27d30c7f63/"
+    },
+    "98": {
+       "quoteText": "Никто никогда ничего бы не сделал, если б сперва опроверг все возражения. ",
+       "quoteAuthor": "Сэмюэль Джонсон",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/d66e42b218/"
+    },
+    "99": {
+       "quoteText": "Если Вам нужно решить сложную проблему — не ищите …мывайте и внедряйте все 12. Сразу. Одновременно. ",
+       "quoteAuthor": "",
+       "senderName": "",
+       "senderLink": "",
+       "quoteLink": "http://forismatic.com/ru/a69f2230e6/"
+    }
+ }

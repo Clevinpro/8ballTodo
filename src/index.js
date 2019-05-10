@@ -36,3 +36,6 @@ const todo = new app();
 todo.addTodo(notes[0]);
 todo.addTodo(notes[1]);
 todo.renderNodesList();
+
+
+
