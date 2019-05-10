@@ -166,8 +166,8 @@ export default class App {
 
   // _________________________8BALL____________
   taskComplited() {
-    this.refs.ball8.classList.add('active');
     const quote = quotes[generatePhrase(99) + ''];
+    this.refs.ball8.classList.add('active');
 
     console.log('quote', quote);
     
