@@ -1,16 +1,19 @@
+import a from "./app";
+
 const add = document.querySelector(`.btn2`);
 const modalWrapper = document.querySelector(`.modal_wrapper`);
 const modal = document.querySelector(`.modal_window`);
+const checkbox = document.querySelector(`.favCheckbox`);
 const btnAdd = document.querySelector(`.btn`);
 const body = document.querySelector(`body`);
 const h2 = document.querySelector(`.main_title_input`);
 const p = document.querySelector(`.main_content_text`);
 
 export const showModal = el => {
-  console.log(el.target)
+  console.log(el.target);
   if (el.target === modalWrapper) {
     modalWrapper.classList.toggle(`show`);
-  } else if (el.target.closest('.btn2') === add || el.target === add) {
+  } else if (el.target.closest(".btn2") === add || el.target === add) {
     modalWrapper.classList.toggle(`show`);
   } else if (el.target === btnAdd) {
     if (h2.value === "" || p.value === "") {
@@ -23,8 +26,7 @@ export const showModal = el => {
   }
 };
 
-export const addNote = () => {
-  const checkbox = document.querySelector(`.favCheckbox`);
+export const createNote = () => {
   const obj = {
     title: h2.value,
     body: p.value,
@@ -41,4 +43,4 @@ export const addNote = () => {
 };
 
 body.addEventListener(`click`, showModal);
-btnAdd.addEventListener(`click`, addNote);
+// btnAdd.addEventListener(`click`, createNote);
