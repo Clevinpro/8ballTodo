@@ -1,37 +1,6 @@
 import { genarateId } from "./utils/helper";
 import {deleteNote ,addNote} from "./utils/api";
 
-export const notes = [
-  {
-    id: 1,
-    title: "First",
-    body: "1111111",
-    inProgress: false,
-    complted: false
-  },
-  {
-    id: 2,
-    title: "Second",
-    body: "2222222",
-    inProgress: true,
-    complted: false
-  },
-  {
-    id: 3,
-    title: "Third",
-    body: "333333333",
-    inProgress: false,
-    complted: true
-  },
-  {
-    id: 4,
-    title: "Fourth",
-    body: "444444444444",
-    inProgress: true,
-    complted: false
-  }
-];
-
 class App {
   constructor() {
     this._notes = [];
