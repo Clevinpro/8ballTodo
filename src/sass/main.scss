@@ -55,8 +55,10 @@ body {
   border: black 2px solid;
   background-color:skyblue;
   position: absolute;
-  transform: translate(50%, 50%);
+  transform: translate(-50%, -50%);
   border-radius: 15px;
+  top:50%;
+  left:50%;
 }
 
 .modal_wrapper {
@@ -182,7 +184,7 @@ ul {
 }
 
 body {
-  background-color: -webkit-radial-gradient(100px 100px, circle, #1f2327, #000);;
+  background-color: #3498db;
   height: 100vh;
   display: flex;
   flex-direction: column;
