@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Notepad</title>
-    <!-- <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Notepad</title>
+  <!-- <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     /> -->
@@ -511,18 +512,27 @@
             width="50"
           />
         </a>
+        <div class="todo-trash" style="color:#fff;background-color: aqua;display:inline-block;width: 10rem;height: 10rem;">
+          Trash
+        </div>
       </header>
   
       <main class="main">
-        <div class="main__card-container">
-          <div class="main__card main__card__start"></div>
-          <div class="main__card main__card__progress"></div>
-          <div
-            class="main__card main__card__completed"
-            data-column="completed"
-          ></div>
-        </div>
-      </main>
+          <div class="main__card-container">
+            <div class="status_wrapper toDo">
+              <h2 class="status_name">to do</h2>
+              <div class="main__card main__card__start"></div>
+            </div>
+            <div class="status_wrapper inProgress">
+              <h2 class="status_name">in progress</h2>
+              <div class="main__card main__card__progress"></div>
+            </div>
+            <div class="status_wrapper Completed">
+              <h2 class="status_name">completed</h2>
+              <div class="main__card main__card__completed"></div>
+            </div>
+          </div>
+        </main>
   
       <footer class="footer"></footer>
   

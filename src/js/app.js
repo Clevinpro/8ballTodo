@@ -44,6 +44,7 @@ export default class App {
     this._notes = [];
     this.refs = {};
     this.refs.todoElement;
+    this.refs.trash = document.querySelector('.todo-trash');
     this.refs.noteList = document.querySelector(".main__card-todo");
     this.refs.start = document.querySelector(`.main__card__start`);
     this.refs.inprogress = document.querySelector(`.main__card__progress`);
@@ -82,6 +83,12 @@ export default class App {
 
     this.refs.body.addEventListener(`click`, this.showModal);
     this.refs.btnAdd.addEventListener(`click`, this.handleCreateNote);
+
+    this.refs.trash.addEventListener('mousedown', this.dragAndDrop);
+    this.refs.trash.addEventListener('dragover', this.dragOver);
+    this.refs.trash.addEventListener('dragenter', this.dragEnter);
+    this.refs.trash.addEventListener('dragleave', this.dragLeave);
+    this.refs.trash.addEventListener('drop', this.dragDrop);
   }
 
   get notes() {
@@ -155,6 +162,7 @@ export default class App {
         el.addEventListener('dragleave', this.dragLeave);
         el.addEventListener('drop', this.dragDrop);
     });
+    
   }
 
   dragAndDrop(e) {
@@ -187,42 +195,50 @@ export default class App {
 
   dragDrop(e) {
     let target = e.target.closest('.main__card');
+    
+    
+    
+    if (e.target.classList.contains('todo-trash')) {
+      console.log('ok');
+      deleteNote(Number(this.refs.todoElement.dataset.id));
+      this._notes = this._notes.filter(el => el.id !== Number(this.refs.todoElement.dataset.id));
+      return this.renderNodesList();
 
-    target.append(this.refs.todoElement);
-
-    if (target.classList.contains('main__card__start')) {
+    } else if (target.classList.contains('main__card__start')) {
       let curentElementId = Number(this.refs.todoElement.dataset.id);
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
-            el.inProgress = false;
-            el.completed = false;
-          }
+          el.inProgress = false;
+          el.completed = false;
         }
+      }
       );
       addNote(this._notes);
     } else if (target.classList.contains('main__card__progress')) {
       let curentElementId = Number(this.refs.todoElement.dataset.id);
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
-            el.inProgress = true;
-            el.completed = false;
-          }
+          el.inProgress = true;
+          el.completed = false;
+        }
       }
-    );
+      );
       addNote(this._notes);
     } else if (target.classList.contains('main__card__completed')) {
       let curentElementId = Number(this.refs.todoElement.dataset.id);
       this._notes.forEach(el => {
         if (curentElementId === el.id) {
-            el.inProgress = false;
-            el.completed = true;
-          }
+          el.inProgress = false;
+          el.completed = true;
+        }
       }
-    );
+      );
       addNote(this._notes);
       setTimeout(() => this.taskComplited(), 1000)
       
-    }
+    } 
+    target.append(this.refs.todoElement);
+    console.log(e.target.classList.contains('todo-trash'));
   }
 
   // _________________________8BALL____________
