@@ -42,16 +42,23 @@
           width="50"
         />
       </a>
+      <h2 class="project_title">8ballTodo</h2>
     </header>
 
     <main class="main">
       <div class="main__card-container">
-        <div class="main__card main__card__start"></div>
-        <div class="main__card main__card__progress"></div>
-        <div
-          class="main__card main__card__completed"
-          data-column="completed"
-        ></div>
+        <div class="status_wrapper toDo">
+          <h2 class="status_name">to do</h2>
+          <div class="main__card main__card__start"></div>
+        </div>
+        <div class="status_wrapper inProgress">
+          <h2 class="status_name">in progress</h2>
+          <div class="main__card main__card__progress"></div>
+        </div>
+        <div class="status_wrapper Completed">
+          <h2 class="status_name">completed</h2>
+          <div class="main__card main__card__completed"></div>
+        </div>
       </div>
     </main>
 
