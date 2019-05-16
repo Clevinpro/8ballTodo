@@ -28,6 +28,23 @@ body {
   justify-content: space-between;
 }
 
+input,
+textarea {
+  transition: 0.3s linear;
+  outline: none;
+  padding: 20px;
+  border: 2px solid #4286f4;
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: blueviolet;
+  outline-color: transparent;
+}
 .header {
   padding: 2rem 0;
   display: flex;
@@ -58,6 +75,7 @@ body {
   margin-bottom: 15px;
   font-family: "Righteous", cursive;
   color: black;
+  position: relative;
 }
 
 .project_title {
@@ -81,16 +99,16 @@ body {
 }
 
 .modal_window {
-  height: 300px;
   width: 400px;
   align-content: center;
   border: black 2px solid;
   background-color: skyblue;
   position: absolute;
   transform: translate(-50%, -50%);
-  border-radius: 15px;
+  border-radius: 7px;
   top: 50%;
   left: 50%;
+  padding: 20px;
 }
 
 .modal_wrapper {
@@ -134,7 +152,7 @@ body {
   margin-right: 15px;
   margin-left: 15px;
   border-color: grey;
-  border-width: 1px;
+  border-width: 2x;
   height: 20px;
 }
 
@@ -144,21 +162,14 @@ body {
   margin-right: 15px;
   margin-left: 15px;
   border-color: grey;
-  border-width: 1px;
+  border-width: 2px;
   position: relative;
 }
 
-.favCheckbox {
-  // <<<<<<< HEAD
-  //     position: absolute;
-  //     right: 119px;
-  //     bottom: 64.5px;
-  //     font-family: 'Righteous', cursive;
-
-  // =======
+favCheckbox {
   position: absolute;
-  right: 124px;
-  bottom: 57.5px;
+  right: 90px;
+  bottom: 2px;
 }
 
 .main__title,
@@ -170,13 +181,18 @@ body {
 
 .btn {
   width: 50%;
-  height: 20px;
   border-radius: 15px;
   padding-bottom: 3px;
   font-weight: 500;
   border-width: 1px;
   border-color: grey;
   font-family: "Righteous", cursive;
+  padding: 10px;
+  transition: 0.2s linear;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+  }
 }
 // .btn2 {
 //     text-decoration: none;
@@ -266,6 +282,7 @@ ul {
 
 .status_name {
   margin: 0 auto;
+  text-shadow: #fff 0px 0px 2px, #fff 0px 0px 4px, #fff 0px 0px 7px;
 }
 
 .toDo {
