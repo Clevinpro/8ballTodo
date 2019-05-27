@@ -58,16 +58,12 @@
 }
 
 .stars {
-  background: #000
-    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
-    center;
+  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index: 0;
 }
 
 .twinkling {
-  background: transparent
-    url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat
-    top center;
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
   z-index: 1;
 
   -moz-animation: move-twink-back 200s linear infinite;
@@ -189,6 +185,7 @@ span {
   font-family: "Amatic SC", cursive;
   text-shadow: 0px 2px 20px rgb(241, 1, 1);
 }
+
 .author {
   font-family: "Amatic SC", cursive;
   color: #c1b8b8;
@@ -196,8 +193,9 @@ span {
 }
 
 .afor {
-  font-size: 16px;
-  letter-spacing: 1px;
+  font-family: "Amatic SC", cursive;
+  font-size: 19px;
+  letter-spacing: 1.5px;
 }
 
 .ball8 {
@@ -209,51 +207,43 @@ span {
   height: 100vh;
   width: 100%;
   background-color: black;
+  z-index: 5;
   /* Webkit */
-  background-image: -webkit-gradient(
-      radial,
+  background-image: -webkit-gradient(radial,
       50% 50%,
       2,
       50% 50%,
       40,
       from(white),
       color-stop(0.1, rgba(54, 54, 54, 0.5)),
-      to(transparent)
-    ),
+      to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 30, from(white), color-stop(0.1, rgba(65, 60, 58, 0.4)), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 40, from(rgba(255, 255, 255, 0.9)), color-stop(0.05, rgba(65, 65, 65, 0.3)), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(rgba(255, 255, 255, 0.4)), color-stop(0.03, rgba(47, 48, 42, 0.2)), to(transparent));
   /* Firefox */
-  background-image: -moz-radial-gradient(
-      circle,
+  background-image: -moz-radial-gradient(circle,
       #ffffff 2px,
       rgba(248, 255, 128, 0.5) 4px,
-      transparent 40px
-    ),
-    -moz-radial-gradient(circle, #ffffff 1px, rgba(255, 186, 170, 0.4) 3px, transparent
-          30px),
-    -moz-radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, rgba(
-            251,
-            255,
-            186,
-            0.3
-          )
-          2px, transparent 40px),
-    -moz-radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(
-            253,
-            255,
-            219,
-            0.2
-          )
-          1px, transparent 30px);
+      transparent 40px),
+    -moz-radial-gradient(circle, #ffffff 1px, rgba(255, 186, 170, 0.4) 3px, transparent 30px),
+    -moz-radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, rgba(251,
+        255,
+        186,
+        0.3) 2px, transparent 40px),
+    -moz-radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(253,
+        255,
+        219,
+        0.2) 1px, transparent 30px);
   /* Background images size */
   background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
   /* Background images position*/
   background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
   transition: 0.7s ease-in-out;
+
   &.active {
     visibility: visible;
     opacity: 1;
+
     .ball {
       visibility: visible;
       opacity: 1;

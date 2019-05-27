@@ -4,24 +4,23 @@
 @import "./ball8.scss";
 
 $baseFontSize: 16px;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
 }
+
 body {
   position: relative;
-  background: #373b44; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #4286f4,
-    #373b44
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #4286f4,
-    #373b44
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,6 +44,7 @@ textarea:active {
   border-color: blueviolet;
   outline-color: transparent;
 }
+
 .header {
   padding: 2rem 0;
   display: flex;
@@ -86,9 +86,11 @@ textarea:active {
   font-size: 66px;
   margin: 0 auto;
   text-align: center;
-  color: #fff;
-  font-weight: 300;
+  color: rgba(61, 118, 224, 0.842);
   letter-spacing: 12px;
+  font-weight: 800;
+  text-shadow: 1px -1px 3px #000;
+
 }
 
 .favorites {
@@ -135,6 +137,7 @@ textarea:active {
   padding: 0.5rem;
   margin-bottom: 1rem;
   position: relative;
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -190,10 +193,12 @@ favCheckbox {
   padding: 10px;
   transition: 0.2s linear;
   cursor: pointer;
+
   &:hover {
     background: #fff;
   }
 }
+
 // .btn2 {
 //     text-decoration: none;
 //    outline: none;
@@ -287,19 +292,19 @@ ul {
 
 .toDo {
   display: flex;
-  color: red;
+  color: rgb(65, 64, 64);
   font-size: 24px;
 }
 
 .inProgress {
   display: flex;
-  color: blue;
+  color: rgb(151, 151, 151);
   font-size: 24px;
 }
 
 .Completed {
   display: flex;
-  color: green;
+  color: rgb(47, 88, 177);
   font-size: 24px;
 }
 
@@ -325,6 +330,7 @@ ul {
   padding: 0.5rem;
   margin-bottom: 1rem;
   cursor: pointer;
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -346,6 +352,7 @@ ul {
   top: 0.1875rem;
   right: 0.1875rem;
 }
+
 .title {
   margin-bottom: 15px;
   margin-top: 15px;
@@ -359,6 +366,7 @@ ul {
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
 }
+
 .todo-trash_wrapper {
   position: absolute;
   right: 0;
@@ -368,6 +376,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
   .todo-trash {
     width: 120px;
     height: 180px;
@@ -376,6 +385,7 @@ ul {
     left: 0;
     top: 0;
   }
+
   svg {
     width: 80px;
     height: 80px;
