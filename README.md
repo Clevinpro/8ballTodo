@@ -1,4 +1,4 @@
-8ballTodo
+8ballTodo (Develop by Bootcamp 11. GoIT)
 =============
 
 Installation (for develop)
